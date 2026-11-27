@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no">
+<meta name="theme-color" content="#0f1419">
+<title>Chess Trainer</title>
+<link rel="stylesheet" href="/static/styles.css">
+<script type="importmap">
+{ "imports": { "chess.js": "/static/vendor/chess.js" } }
+</script>
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand"><span class="dot"></span>Chess Trainer</div>
+    <nav class="nav">
+      <a href="#/play" data-route="play">Play</a>
+      <a href="#/puzzles" data-route="puzzles">Puzzles</a>
+      <a href="#/learn" data-route="learn">Learn</a>
+      <a href="#/ratings" data-route="ratings">Ratings</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- PLAY PAGE -->
+    <section id="page-play" class="page active">
+      <div class="layout-split">
+        <div>
+          <div class="board-wrap">
+            <canvas id="board-canvas"></canvas>
+            <div id="feedback" class="feedback">
+              <div class="verdict ok" id="verdict">Move</div>
+              <div id="feedback-text">Your turn. Make a move.</div>
+            </div>
+          </div>
+          <div class="btn-row" style="margin-top:10px">
+            <button class="btn small secondary" id="btn-flip">Flip board</button>
+            <button class="btn small ghost" id="btn-new">New game</button>
+            <button class="btn small ghost" id="btn-undo">Undo</button>
+            <button class="btn small ghost" id="btn-back">◀ Back</button>
+            <button class="btn small ghost" id="btn-forward">Forward ▶</button>
+          </div>
+          <div class="card" style="margin-top:10px">
+            <div class="muted" style="font-size:.78rem;margin-bottom:6px">Difficulty</div>
+            <div class="btn-row" id="difficulty-row">
+              <button class="btn small ghost" data-level="1">Novice</button>
+              <button class="btn small ghost" data-level="2">Club</button>
+              <button class="btn small ghost" data-level="3">Strong</button>
+              <button class="btn small ghost" data-level="4">Master</button>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <h3>Moves</h3>
+            <div class="move-list" id="move-list"><div class="muted" style="padding:8px 0">No moves yet.</div></div>
+          </div>
+          <div class="card" style="margin-top:10px">
+            <h3>Rating</h3>
+            <div id="rating-summary" class="muted">Loading…</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PUZZLES PAGE -->
+    <section id="page-puzzles" class="page">
+      <h1>Puzzles</h1>
+      <p class="muted">Find the best move. Solutions are verified by Stockfish.</p>
+      <div class="puzzle-card" id="puzzle-container"></div>
+      <div class="btn-row" style="margin-top:12px">
+        <button class="btn" id="btn-next-puzzle">Next puzzle</button>
+        <button class="btn secondary" id="btn-reset-puzzle">Reset</button>
+      </div>
+    </section>
+
+    <!-- LEARN PAGE -->
+    <section id="page-learn" class="page">
+      <h1>Learn chess</h1>
+      <p class="muted">Concepts, principles and scoring — written for learners.</p>
+      <div id="learn-container"></div>
+    </section>
+
+    <!-- RATINGS PAGE -->
+    <section id="page-ratings" class="page">
+      <h1>Ratings</h1>
+      <div class="card" style="text-align:center">
+        <div class="rating-ring" id="rating-ring"><div class="inner"><div class="num" id="rating-num">1500</div><div class="muted" style="font-size:.7rem">Glicko-2</div></div></div>
+        <p class="muted" id="rating-detail" style="margin-top:10px">Loading…</p>
+      </div>
+      <h2>Recent games</h2>
+      <div id="games-list"></div>
+    </section>
+  </main>
+</div>
+
+<!-- Chat -->
+<button class="chat-toggle" id="chat-toggle" aria-label="Open chat">💬</button>
+<div class="chat-log" id="chat-log">
+  <button class="chat-close" id="chat-close">Close</button>
+  <h2 style="margin-top:34px">Chat with Hermes</h2>
+  <p class="muted" style="margin-top:-4px">Ask about moves, strategies, openings. Live.</p>
+  <div id="chat-messages"></div>
+</div>
+<div class="chat-panel" id="chat-panel">
+  <textarea class="chat-input" id="chat-input" placeholder="Ask about a move…" rows="1"></textarea>
+  <button class="btn" id="chat-send">Send</button>
+</div>
+
+<script src="/static/vendor/three.min.js"></script>
+<script type="module" src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+{
+  "puzzles": [
+    {
+      "id": "back-rank-rook",
+      "title": "Back-rank mate",
+      "fen": "6k1/5ppp/8/8/8/8/8/R5K1 w - - 0 1",
+      "solution": "Ra8#",
+      "hint": "The enemy king is boxed in behind its own pawns.",
+      "difficulty": 1,
+      "theme": "back rank"
+    },
+    {
+      "id": "back-rank-queen",
+      "title": "Back-rank mate (queen)",
+      "fen": "6k1/5ppp/8/8/8/8/8/6KQ w - - 0 1",
+      "solution": "Qa8#",
+      "hint": "The queen can reach the 8th rank through the long diagonal.",
+      "difficulty": 1,
+      "theme": "back rank"
+    },
+    {
+      "id": "knight-fork-mate",
+      "title": "Mate with the knight",
+      "fen": "6k1/8/6N1/8/8/8/8/7K w - - 0 1",
+      "solution": "Nf6#",
+      "hint": "The knight can deliver mate from the f6 square.",
+      "difficulty": 1,
+      "theme": "knight"
+    },
+    {
+      "id": "queen-check-mate",
+      "title": "Queen mate on h7",
+      "fen": "6k1/6pp/8/8/8/8/8/6KQ w - - 0 1",
+      "solution": "Qh7#",
+      "hint": "The queen can deliver mate on the h7 square.",
+      "difficulty": 2,
+      "theme": "queen"
+    }
+  ]
+}

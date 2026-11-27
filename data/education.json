@@ -1,0 +1,34 @@
+{
+  "sections": [
+    {
+      "id": "scoring",
+      "title": "How chess scoring works",
+      "body": "In a normal game: 1 point for a win, ½ for a draw, 0 for a loss. Chess ratings (Elo/Glicko-2) are an estimate of your skill based on your results against players of different strengths. Winning against a strong opponent raises your rating more than winning against a weak one. A rating of 1500 is the average club-level player; 2000+ is master level."
+    },
+    {
+      "id": "openings",
+      "title": "Openings — what they are",
+      "body": "An opening is the first 10-20 moves of a game. White has an advantage in the first few moves, so both sides prepare openings to turn that into an advantage. The Sicilian Defense is one of the most popular responses to 1.e4 — Black plays 1...c5 instead of blocking the center. The French Defense (1...e6), the Italian Game (1.e4 e5 2.Nf3 Nc6 3.Bc4) and the Ruy Lopez are other famous frameworks. You don't need to memorize a whole opening; a small set of sound lines you know well is better than a big list you don't."
+    },
+    {
+      "id": "tactics",
+      "title": "Tactics — the heart of chess",
+      "body": "A tactic is a forced sequence of moves that wins material or checkmates. Common patterns: pins (a piece can't move without exposing something behind it), forks (one move attacks two targets), discovered attacks (moving one piece reveals an attack by another), and mate patterns (back-rank, queen+rook, knight forks). The fastest way to improve is to solve puzzles every day."
+    },
+    {
+      "id": "endgame",
+      "title": "Endgames",
+      "body": "When most pieces are gone, the outcome depends on material and king position. The basic king and pawn endgame teaches the most important idea: the king is a piece too, and its position can decide the game. Learn the basic pawn-endgame patterns before trying rook endgames."
+    },
+    {
+      "id": "strategy",
+      "title": "Strategy — principles that matter",
+      "body": "Control the center. Develop your pieces quickly. Don't move the same piece twice in a row. Castle to protect your king. Attack the enemy king. And: every move should have a purpose — a threat, a defense, or an improvement. A quiet move with no idea is usually a wasted tempo."
+    },
+    {
+      "id": "learning",
+      "title": "How to learn — a practical routine",
+      "body": "Play one game against Stockfish at your level each session. Review your moves — ask why a move was good or bad. Solve 3-5 puzzles daily. Read one short article about an opening or a tactic. Track your rating and see whether it moves. The fastest improvement comes from honest feedback, not from playing more without review."
+    }
+  ]
+}
