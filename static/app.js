@@ -45,7 +45,7 @@ function route() {
   if (page === 'ratings') renderRatings();
 }
 window.addEventListener('hashchange', route);
-window.addEventListener('load', () => { route(); initBoard(); initEngine(); initChat(); initPuzzlesData(); });
+window.addEventListener('load', () => { route(); initBoard(); resetGame(); initEngine(); initChat(); initPuzzlesData(); });
 
 // ---------- 3D board ----------
 let scene, camera, renderer, boardGroup, pieceMeshes = [], tiles = [], boardSize = 1;
@@ -827,7 +827,3 @@ function initButtons() {
 }
 
 initButtons();
-
-// boot
-resetGame();
-updateRatingSummary();
